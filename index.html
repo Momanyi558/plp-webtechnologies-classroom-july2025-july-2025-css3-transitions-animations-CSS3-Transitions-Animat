@@ -2,15 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive CSS + JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bringing Web Pages to Life</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Bringing Web Pages to Life 🚀</h1>
+  <!-- Header -->
+  <header>
+    <h1>✨ Bringing Web Pages to Life ✨</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#functions">JS Functions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <button onclick="triggerAnimation('box')">Animate Box</button>
-  <div id="box" class="box"></div>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>CSS + JavaScript = Interactive Experiences</h2>
+    <p>Animations, transitions, and smart functions make your websites feel alive.</p>
+    <button class="btn glow-btn" onclick="toggleModal(true)">See Demo</button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About This Assignment</h2>
+    <p>
+      This project demonstrates the **power of CSS3 animations** combined with
+      **JavaScript functions**. The goal is to create visually dynamic and
+      interactive web experiences using:
+    </p>
+    <ul>
+      <li>CSS transitions & keyframes</li>
+      <li>JavaScript functions with parameters & return values</li>
+      <li>DOM manipulation for interactivity</li>
+    </ul>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">CSS Effects</div>
+          <div class="card-back">Transitions, hover, keyframes</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">JS Logic</div>
+          <div class="card-back">Scope, params, returns</div>
+        </div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Integration</div>
+          <div class="card-back">Both worlds combined</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>CSS Animation Gallery</h2>
+    <div class="demo-row">
+      <button class="btn glow-btn">Glowing Button</button>
+      <div class="demo-box" onclick="bounceBox(this)"></div>
+      <div class="pulse-circle"></div>
+    </div>
+  </section>
+
+  <!-- Functions Demo -->
+  <section id="functions">
+    <h2>JavaScript Functions in Action</h2>
+    <div class="function-demo">
+      <label>Enter first number: <input type="number" id="mult-a"></label>
+      <label>Enter second number: <input type="number" id="mult-b"></label>
+      <button class="btn" onclick="runMultiplyDemo()">Multiply</button>
+      <p id="multiply-output"></p>
+
+      <label>Set Global Multiplier:
+        <input type="number" id="global-mult" onchange="updateGlobalMultiplier()">
+      </label>
+      <p id="scope-output"></p>
+
+      <button class="btn" onclick="showSum(5,7)">Show Sum of 5 + 7</button>
+      <p id="sum-output"></p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="demo-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" onclick="toggleModal(false)">✖</button>
+      <h3>Modal Demo</h3>
+      <p>This is a live example of a JavaScript-driven modal box.</p>
+    </div>
+  </div>
+
+  <!-- Spinner -->
+  <div id="demo-spinner" class="spinner" aria-hidden="true"></div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Interactive Assignment Demo</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
